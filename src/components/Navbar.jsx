@@ -22,7 +22,6 @@ function Navbar() {
       );
       console.log(data);
       toast.success(data.message);
-      console.log("YUGANISHSHAH")
       setIsAuthenticated(false);
       navigateTo("/login");
     } catch (error) {

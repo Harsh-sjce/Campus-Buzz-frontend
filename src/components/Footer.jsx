@@ -39,16 +39,16 @@ const Footer = () => {
             </ul>
           </div>
           <div className=" text-center md:text-start">
-            <h2 className="text-lg font-semibold mb-4">Design to code</h2>
+            <h2 className="text-lg font-semibold mb-4">College and University</h2>
             <ul className="space-y-2">
               <li>
                 <a href="#" className="text-gray-400 hover:text-white">
-                  Figma plugin
+                  JSSSTU
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-white">
-                  Templates
+                  SJCE
                 </a>
               </li>
             </ul>
@@ -59,44 +59,44 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <a href="#" className="text-gray-400 hover:text-white">
-                  DhiWise vs Anima
+                  Lcc vs CSI
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-white">
-                  DhiWise vs Appsmith
+                  IEEE Vs LCC
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-white">
-                  DhiWise vs FlutterFlow
+                  CSI vs IEEE
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-white">
-                  DhiWise vs Monday Hero
+                  CSI vs GDSC
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-white">
-                  DhiWise vs Retool
+                  GDSC vs LCC
                 </a>
               </li>
 
               <li>
                 <a href="#" className="text-gray-400 hover:text-white">
-                  DhiWise vs Bubble
+                  IEEE vs GDSC
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-white">
-                  DhiWise vs Figma Dev Mode
+                  IEEE vs SAHAS
                 </a>
               </li>
             </ul>
           </div>
           <div className=" text-center md:text-start">
-            <h2 className="text-lg font-semibold mb-4">Company</h2>
+            <h2 className="text-lg font-semibold mb-4">University</h2>
             <ul className="space-y-2">
               <li>
                 <a href="#" className="text-gray-400 hover:text-white">
@@ -109,8 +109,8 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  Career
+                <a href="https://jssstuniv.in/#/" className="text-gray-400 hover:text-white">
+                  &copy;JSSSTU
                 </a>
               </li>
               <li>
@@ -135,14 +135,14 @@ const Footer = () => {
           <p>&copy; JSS science And technology university</p>
         </div>
         <div className="mt-4 md:mt-0 flex space-x-4">
-          <a href="#">
+          <a href="https://github.com/">
             <FaGithub className="h-6" />
           </a>
-          <a href="#">
+          <a href="https://www.youtube.com/">
             <BsYoutube className="h-6" />
           </a>
 
-          <a href="#">
+          <a href="https://www.linkedin.com/in/harsh-sharma-b714b622a/">
             <FaLinkedin className="h-6" />
           </a>
         </div>

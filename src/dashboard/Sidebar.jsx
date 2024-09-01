@@ -29,7 +29,6 @@ function Sidebar({ setComponent }) {
         "http://localhost:4001/api/users/logout",
         { withCredentials: true }
       );
-      console.log("BYE")
       toast.success(data.message);
       setIsAuthenticated(false);
       navigateTo("/login");

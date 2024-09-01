@@ -14,7 +14,7 @@ function Register() {
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
   const [role, setRole] = useState("");
-  const [education, setEducation] = useState("");
+  const [club, setClub] = useState("");
   const [photo, setPhoto] = useState("");
   const [photoPreview, setPhotoPreview] = useState("");
 
@@ -37,7 +37,7 @@ function Register() {
     formData.append("phone", phone);
     formData.append("password", password);
     formData.append("role", role);
-    formData.append("education", education);
+    formData.append("club", club);
     formData.append("photo", photo);
     try {
       const { data } = await axios.post(
@@ -59,7 +59,7 @@ function Register() {
       setPhone("");
       setPassword("");
       setRole("");
-      setEducation("");
+      setClub("");
       setPhoto("");
       setPhotoPreview("");
       navigateTo("/");
@@ -126,15 +126,16 @@ function Register() {
               />
             </div>
             <select
-              value={education}
-              onChange={(e) => setEducation(e.target.value)}
+              value={club}
+              onChange={(e) => setClub(e.target.value)}
               className="w-full p-2 mb-4 border rounded-md"
             >
-              <option value="">Select Your Education</option>
-              <option value="BCA ">BCA</option>
-              <option value="MCA ">MCA</option>
-              <option value="MBA ">MBA</option>
-              <option value="BBA ">BBA</option>
+              <option value="">Select Your Club or Favourite Club</option>
+              <option value="BCA ">CSI</option>
+              <option value="MCA ">LCC</option>
+              <option value="MBA ">IEEE</option>
+              <option value="BBA ">GDSC</option>
+              <option value="BBA ">SAHAS</option>
             </select>
             <div className="flex items-center mb-4">
               <div className="photo w-20 h-20 mr-4">

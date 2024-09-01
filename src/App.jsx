@@ -25,7 +25,6 @@ function App() {
   );
   const { blogs, isAuthenticated} = useAuth();
   console.log(blogs);
-  console.log("I am herer")
   console.log(isAuthenticated);
  
   return (
