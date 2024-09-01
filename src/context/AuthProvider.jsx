@@ -20,7 +20,7 @@ console.log("HHHHHHHHHh")
           // };
           setIsAuthenticated(true)
           const { data } = await axios.get(
-            "http://localhost:4001/api/users/my-profile",
+            "https://campus-buzz-backend.onrender.com/api/users/my-profile",
             { withCredentials: true }
           );
           setProfile(data);
@@ -37,7 +37,7 @@ console.log("HHHHHHHHHh")
 
     const fetchBlogs = async () => {
       try {
-        const { data } = await axios.get("http://localhost:4001/api/blogs/all-blogs");
+        const { data } = await axios.get("https://campus-buzz-backend.onrender.com/api/blogs/all-blogs");
         setBlogs(data);
       } catch (error) {
         console.error("Error fetching blogs:", error);

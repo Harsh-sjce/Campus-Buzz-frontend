@@ -10,7 +10,7 @@ function MyBlogs() {
     const fetchMyBlogs = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:4001/api/blogs/my-blog",
+          "https://campus-buzz-backend.onrender.com/api/blogs/my-blog",
           { withCredentials: true }
         );
         console.log(data);
@@ -24,7 +24,7 @@ function MyBlogs() {
 
   const handleDelete = async (id) => {
     await axios
-      .delete(`http://localhost:4001/api/blogs/delete/${id}`, {
+      .delete(`https://campus-buzz-backend.onrender.com/api/blogs/delete/${id}`, {
         withCredentials: true,
       })
       .then((res) => {
