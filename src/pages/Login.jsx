@@ -26,10 +26,12 @@ function Login() {
         {
           withCredentials: true,
           headers: {
-            "Content-Type": "multipart/form-data",
+          "Content-Type": "application/json", 
           },
         }
       );
+      console.log("tokeninlogin",data.token)
+      localStorage.setItem("authToken", data.token);
       console.log(data);
       toast.success(data.message || "User Logined successfully");
       setProfile(data);

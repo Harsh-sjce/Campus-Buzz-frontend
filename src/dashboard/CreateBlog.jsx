@@ -66,11 +66,11 @@ function CreateBlog() {
                 className="w-full px-3 py-2 border border-gray-400 rounded-md outline-none"
               >
                 <option value="">Select Category</option>
-                <option value="Devotion">CSI</option>
-                <option value="Sports">LCC</option>
-                <option value="Coding">IEEE</option>
-                <option value="Entertainment">GDSE</option>
-                <option value="Business">Sahas</option>
+                <option value="CSI">CSI</option>
+                <option value="LCC">LCC</option>
+                <option value="IEEE">IEEE</option>
+                <option value="GDSE">GDSE</option>
+                <option value="Sahas">Sahas</option>
               </select>
             </div>
 

@@ -44,9 +44,9 @@ function Trending() {
                       alt="blog"
                       className="w-full h-56 object-cover rounded-t-lg"
                     />
-                    {/* <div className="absolute top-4 left-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm">
+                    <div className="absolute top-4 left-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm">
                       {element.category}
-                    </div> */}
+                    </div>
                   </div>
                   <div className="p-4 bg-gray-50 rounded-b-lg h-36 flex flex-col justify-between">
                     <h1

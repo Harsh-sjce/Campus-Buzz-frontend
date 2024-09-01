@@ -16,20 +16,23 @@ import UpdateBlog from "./dashboard/UpdateBlog";
 import Detail from "./pages/Detail";
 import { Navigate } from 'react-router-dom';
 
+
+
 function App() {
   const location = useLocation();
   const hideNavbarFooter = ["/dashboard", "/login", "/register"].includes(
     location.pathname
   );
-  const { blogs, isAuthenticated } = useAuth();
+  const { blogs, isAuthenticated} = useAuth();
   console.log(blogs);
+  console.log("I am herer")
   console.log(isAuthenticated);
  
   return (
     <div>
       {!hideNavbarFooter && <Navbar />}
       <Routes>
-       <Route
+       <Route 
           exact
           path="/"
           element={

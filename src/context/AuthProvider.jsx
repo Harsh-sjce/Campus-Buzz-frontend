@@ -1,48 +1,53 @@
-import axios from "axios";
 import React, { createContext, useContext, useEffect, useState } from "react";
-import Cookies from "js-cookie";
+import axios from "axios";
+
 export const AuthContext = createContext();
+
 export const AuthProvider = ({ children }) => {
-  const [blogs, setBlogs] = useState();
-  const [profile, setProfile] = useState();
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [blogs, setBlogs] = useState([]);
+  const [profile, setProfile] = useState(null);
+console.log("HHHHHHHHHh")
+  const [isAuthenticated, setIsAuthenticated] = useState(true);
 
   useEffect(() => {
-    const fetchProfile = async () => {
+    const checkAuthentication = async () => {
       try {
-        const token = Cookies.get("token");
-        const parsedToken = token ? JSON.parse(token) : undefined;
-        if (parsedToken) {
+        const token = localStorage.getItem("authToken");
+        if (token) {
+          // Validate token with backend
+          // const { data } = await axios.get("http://localhost:4001/api/users/my-profile", {
+          //   { withCredentials: true }
+          // };
+          setIsAuthenticated(true)
           const { data } = await axios.get(
             "http://localhost:4001/api/users/my-profile",
-            {
-              withCredentials: true,
-              headers: { "Content-Type": "application/json" },
-            }
+            { withCredentials: true }
           );
-          console.log(data);
           setProfile(data);
           setIsAuthenticated(true);
+        } else {
+          console.log("heyy")
+          setIsAuthenticated(false);
         }
       } catch (error) {
-        console.log(error);
+        console.error("Error checking authentication:", error);
+        setIsAuthenticated(false);
       }
     };
+
     const fetchBlogs = async () => {
       try {
-        const { data } = await axios.get(
-          "http://localhost:4001/api/blogs/all-blogs",
-          { withCredentials: true }
-        );
-        console.log(data);
+        const { data } = await axios.get("http://localhost:4001/api/blogs/all-blogs");
         setBlogs(data);
       } catch (error) {
-        console.log(error);
+        console.error("Error fetching blogs:", error);
       }
     };
+
+    checkAuthentication();
     fetchBlogs();
-    fetchProfile();
   }, []);
+
   return (
     <AuthContext.Provider
       value={{
