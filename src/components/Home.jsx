@@ -4,6 +4,7 @@ import Trending from "../Home/Trending";
 import Devotional from "../Home/Devotional";
 import Lcc from "../Home/Lcc";
 import IEEE from "../Home/IEEE";
+import GdSC from "../Home/GdSC";
 import Creator from "../Home/Creator";
 
 function Home() {
@@ -14,6 +15,7 @@ function Home() {
       <Devotional />
       <Lcc />
       <IEEE />
+      <GdSC />
       <Creator />
     </div>
   );
